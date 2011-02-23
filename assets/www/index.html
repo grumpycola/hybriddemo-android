@@ -1,0 +1,65 @@
+<!DOCTYPE HTML>
+<html>
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale-1, maximum-scale=1" />
+    <meta http-equiv="Content-type" content="text/html; charset=utf-8">
+    <title>PhoneGap</title>
+    
+	<link rel="stylesheet" href="css/jquery.mobile.css" type="text/css" media="screen" title="no title" charset="utf-8"/>
+	<link rel="stylesheet" href="css/app.css" type="text/css" media="screen" title="no title" charset="utf-8"/>
+	
+	<!-- jquery, phonegap required -->
+	<script type="text/javascript" charset="utf-8" src="js/jquery.js"></script>
+	<script type="text/javascript" charset="utf-8" src="js/phonegap-0.9.3.js"></script>	
+	
+	<!-- custom script to build the app dom -->
+	<script type="text/javascript" charset="utf-8" src="js/missions.js"></script>
+	<script type="text/javascript" charset="utf-8" src="js/mustache.js"></script>
+	<script type="text/javascript" charset="utf-8" src="js/app.js"></script>
+		
+	<!-- jquery mobile, required -->
+	<script type="text/javascript" charset="utf-8" src="js/jquery.mobile.js"></script>  
+
+	<!-- h1 custom font replacement -->
+	<script type="text/javascript" charset="utf-8" src="js/cufon.js"></script>
+	<script type="text/javascript" charset="utf-8" src="js/Nasalization_Rg_400.font.js"></script>
+	<script type="text/javascript">
+		$(function() {
+			Cufon.replace('h1');
+		});
+	</script>	
+	
+  </head>
+  <body>
+	  
+	  <div data-role="page" id="mainPage">
+		<div data-role="header">
+		  <ul>
+		  	<li class="title"><h1>NASA Missions</h1></li>
+		  </ul>
+		  <a href="#aboutPage" id="aboutPage-link" data-rel="dialog" data-transition="flip" data-iconpos="notext" data-icon="info" class="ui-btn-right">About</a>
+		</div>
+	  
+  	  	<div data-role="content">
+		  <div data-role="listview" data-inset="true" data-filter="true" id="listdata">
+			Please wait...
+		  </div>
+  	  	</div>
+  	  </div>
+
+	  <div data-role="dialog" id="aboutPage">
+		<div data-role="header" data-theme="d" data-position="inline">
+			<h2>About</h2>
+		</div>
+		<div data-role="content">
+			<p>
+			Platform: <span id="platform"></span><br/>
+			Version: <span id="version"></span><br/>
+			</p>
+			<p>This is sample project for <a href="http://rdacorp.com" rel="external">rdacorp.com</a></p>
+			<p>All pictures are courtesy of <a href="http://www.nasa.gov/missions/index.html" rel="external">NASA</a></p>
+		</div>
+	  </div>
+
+  </body>
+</html>
